@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="subject" content="Game Resurrection">
+  <meta name="description" content="GamR. Game Resurrection">
+  <meta name="keywords" content="code, project, infoiasi, web, drinks" />
+  <meta name="author" content="Ardeleanu Gabriel, Dodan Gabriel, Morariu Georgiana">
+  <title>Game Resurrection</title>
+  <link rel="stylesheet" href="style_scholarly.css">
+
+</head>
+
+<body prefix="schema: http://schema.org" itemscope="" itemtype="http://schema.org/WebPage">
+  <h1 itemprop="name">GamR</h1>
+  <ul>
+    <li>
+      <a href="#authors"> <span>1</span>Authors</a>
+    </li>
+    <li>
+      <a href="#introduction"> <span>2</span>Introduction</a>
+      <ul>
+        <li>
+          <a href="#scope"> <span>2.1 </span>Purpose</a>
+        </li>
+        <li>
+          <a href="#conventions"> <span>2.2</span> Theme</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#generalDescription"><span>3.</span> General description</a>
+      <ul>
+        <li><a href="#productPerspective"><span>3.1</span> General description </a></li>
+        <li><a href="#productFunctions"><span>3.2</span> Changes</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#externalRequirements"><span>4.</span> Personas</a>
+      <ul>
+        <li><a href="#intro"><span>4.1</span> Introduction</a></li>
+        <li><a href="#p1"><span>4.2</span> Persona 1</a></li>
+        <li><a href="#p2"><span>4.3</span> Persona 2</a></li>
+        <li><a href="#p3"><span>4.4</span> Persona 3</a></li>
+        <li><a href="#p4"><span>4.5</span> Persona 4</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#ui"><span>5.</span>UI - Storyboard form</a>
+      <ul>
+        <li><a href="#uf"><span>5.1 </span>User Flow</a></li>
+        <li><a href="#mm"><span>5.2 </span>Main menu</a></li>
+        <li><a href="#cr"><span>5.3 </span>Credits</a></li>
+        <li><a href="#set"><span>5.4 </span>Settings</a></li>
+        <li><a href="#pps"><span>5.5 </span>Pre Play Screen</a></li>
+        <li><a href="#dif"><span>5.6 </span>Difficulty</a></li>
+        <li><a href="#ml"><span>5.7 </span>Map Layout</a></li>
+        <li><a href="#fai"><span>5.8 </span>Level failed</a></li>
+        <li><a href="#won"><span>5.9 </span>Level complete</a></li>
+
+      </ul>
+    </li>
+    <li>
+      <a href="#functionalRequirements"><span>6.</span>Interaction Types</a>
+      <ul>
+        <li><a href="#register"><span>6.1 </span>Keyboard + Mouse Input</a></li>
+        <li><a href="#login"><span>6.2 </span>Mobile Touch-screen Input</a></li>
+        <li><a href="#uploadrecipe"><span>6.3 </span>Audio Input-Output</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#bibliography"><span>7. </span>References</a>
+    </li>
+  </ul>
+
+
+  <article id="article" typeof="schema:ScholarlyArticle" resource="#">
+    <section id="authors" typeof="sa:AuthorsList">
+      <h2><span>1. </span>Authors</h2>
+      <ol>
+        <li property="schema:author" typeof="sa:ContributorRole">
+          <a property="schema:author" href="#" typeof="schema:Person">
+            <span property="schema:giveName">Gabriel</span>
+            <span property="schema:familyName">Ardeleanu</span>
+          </a>
+        </li>
+
+        <li property="schema:author" typeof="sa:ContributorRole">
+          <a property="schema:author" href="#" typeof="schema:Person">
+            <span property="schema:giveName">Gabriel</span>
+            <span property="schema:familyName">Dodan</span>
+          </a>
+        </li>
+
+        <li property="schema:author" typeof="sa:ContributorRole">
+          <a property="schema:author" href="#" typeof="schema:Person">
+            <span property="schema:giveName">Georgiana</span>
+            <span property="schema:familyName">Morariu</span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+
+    <section typeof="sa:ScholarlyArticle" role="doc-introduction">
+      <h2 id="introduction"> <span>2. </span>Introduction</h2>
+      <p>
+        Choose a classical electronic game and propose a modern version of it by using natural I/O devices and
+        interaction methods – for example, vocal input or interaction via (pseudo-)haptic handheld devices and 3D output
+        (i.e. adopting the virtual/augmented reality representations).
+
+      <h3 id="scope"><span>2.1 </span>Purpose</h3>
+      <p>
+        The purpose of this project is to illustrate the process of creating a modern version of a classical electronic
+        game, by adding new features and most importantly using natural I/O devices and interaction methods. Simply put,
+        classical electronic games refer to the category of “old” simple games with little to no game knowledge
+        required, just play and enjoy: Pong, Tetris and PacMan.
+      </p>
+
+      <h3 id="conventions"><span>2.2 </span>Theme</h3>
+      <p>
+        For our theme, we chose the game PacMan, which is normally a top-down platform game, in which the player
+        character is always moving, and you use directional input to change directions: Up Down Left Right.
+      </p>
+
+      <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+        <h2 id="generalDescription"> <span>3. </span>General description</h2>
+
+
+        <h3 id="productPerspective"> <span>3.1 </span>General description</h3>
+        <p>
+          For our version, we decided to convert this game to a first-person experience, give full control to the
+          player, rethink some of the original game mechanics and finally add a new interaction layer between human and
+          computer in the form of audio input and output. This new layer will provide us with a way to add new features
+          to gameplay while not removing any of the original feel of the game.
+        </p>
+
+        <h3 id="productFunctions"> <span>3.2 </span>Changes</h3>
+        <p>
+          Changes to the original version of the game:</p>
+        <ul>
+          <li>Game style changed from Top-Down Platformer to First-Person Explorer</li>
+          <li>Input modified to better suit the new game style</li>
+          <li>Added a Map-Device function which allows the player to view the current state of the game, Map layout,
+            Player location, and Score-Points location</li>
+          <li>Added a toggleable game mechanic consisting of doors inside the labyrinth walls which can be opened and
+            closed from fixed terminals</li>
+          <li>Added a toggleable game mechanic consisting of audio interaction, the input of the player can be used to
+            redirect and bait the Ghost AI into desired locations and the output consisting of the nearby ghosts will
+            give information to the player related to which ghosts are close to the player. The sounds consist of simple
+            sound dots and the frequency of the sound being played is related to how aware the player should be around
+            each ghost: the faster the dots are heard, the smarter the ghost</li>
+        </ul>
+
+      </section>
+
+      <h2 id="externalRequirements"><span>4. </span>Personas</h2>
+
+      <h3 id="intro"><span>4.1 </span>Introduction</h3>
+      <p>
+        A Persona is a representative of a larger community of potential users, each category being different from the
+        other in many aspects, but the main questions we are going to ask are:</p>
+      <ul>
+        <li>Do we want this person to use our product?</li>
+        <li>Will they be able to use it properly? </li>
+        <li>How likely is it for them to purchase or recommend it?</li>
+      </ul>
+      <p>While not having precise answers to these questions, using the Personas we can focus our product to satisfy our
+        potential users while not wasting resources trying to sell to those who will not buy it.
+      </p>
+      <p>In the following section, we are going to present 4 different personas, including Primary, Secondary, Negative,
+        and Customer personas, and give a scenario example for each user’s interaction with our product. For each of the
+        personas excluding the Primary one, we will make a small conclusion that will improve the user experience while
+        trying to avoid both technical and social problems thus increasing the selling probability of our product.</p>
+      <p>The 4 Personas we are going to describe are: </p>
+      <ul>
+        <li><b>Radu Coptescu</b> - a boy in the 6th class that is at the same time lively and competitive, will
+          represent the Primary Persona, a category that we are focusing our product on.</li>
+        <li><b>Mihai Ixulescu</b> - a 24 years old student that is focused on his professional life, but did not abandon
+          our category of products. While representing the Second Persona, a category that may or may not use our
+          product, we will also take into consideration the needs of this persona.</li>
+        <li><b>Daniel Zulescu</b> - a 34 years old man, currently working in a Human Resources department. While it is
+          highly unlikely that this individual will use our product he might represent the Customer Persona, purchasing
+          the product for someone else, like a child. While he is not a user, we still have to consider him as a
+          potential buyer and consider it during product development.</li>
+        <li><b>Vasile Moș</b> - a 67 years old retired person. This individual has low to no experience using technology
+          and is not tolerant of the idea that most products in our day are based on Human-Computer Interaction. He
+          represents the Negative Persona, a category that will not be our focus while designing and selling our
+          product.</li>
+      </ul>
+      <h3 id="p1"><span>4.2 </span>Persona 1</h3>
+      <img src="IMG/P1.png" alt='persona 1'>
+      <ol>
+        <li>Type: Primary Persona</li>
+        <li>Name: Radu Coptescu</li>
+        <li>Background:
+          <ul>
+            <li>Date of Birth:15.02.2009</li>
+            <li>Gender: Male</li>
+            <li>Location: Iasi, Romania</li>
+            <li>Work place: -</li>
+            <li>School: Attending Scoala Gimnaziala Stefan Barsanescu</li>
+            <li>Tecnnology Level: Knows most basic functions of Mobile Devices or Laptops.</li>
+          </ul>
+        </li>
+        <li>Main Points:
+          <ul>
+            <li>Experience with certain products: Enjoys playing strategy games.</li>
+            <li>Dislikes about certain aspects: Dislikes random behaviours.</li>
+            <li>No relevant disabilities.</li>
+            <li>Social connections: Family, friends, and school colleagues.</li>
+            <li>Working environment: No work environment.</li>
+          </ul>
+        </li>
+        <li>Goals:
+          <ul>
+            <li>Practical Goals: If possible make a competition out of everything.</li>
+            <li>Personal Goals: Always be the best in what you like.</li>
+            <li>Business Goals: Have the best-paying job.</li>
+          </ul>
+        </li>
+        <li>Frustrations and Pain Points:
+          <ul>
+            <li>Dislike to randomness may not work well with certain AI behaviours.</li>
+            <li>No Disabilities;</li>
+            <li>Rushes to make decisions;</li>
+            <li>User may not take well some aspects of the game.</li>
+          </ul>
+        </li>
+        <li>Detailed Description:</li>
+        <p>This candidate is our main focus, spending most of his time playing games and competing with others for the
+          best score. It is highly likely that this user will recommend our product to many others in order to find new
+          competitors.</p>
+        <p>In the mentions section there were mentioned many other games that rely on some extent of strategy, but also
+          a small inconvenience to randomness. Taking these into account we should make the behaviours of the AI Ghosts
+          less randomized or have less importance if their actions are sometimes randomized. (example: do not randomly
+          turn around to chase the player”).
+        </p>
+        <li>Scenarios</li>
+        <p>Let us imagine the next series of events:</p>
+        <ul>
+          <li>the user was gifted access to our product from his parents</li>
+          <li>while playing the game, he noticed some random behaviour from the ghost movement but no major actions were
+            randomized.</li>
+          <li>after figuring out the map layout and the best routes between points, a high score was achieved.</li>
+          <li>eager to become the best player in his group of friends, he started recommending our product.</li>
+          <li>our product is now purchased by many more users and the possibility of it being recommended increases
+            significantly.</li>
+        </ul>
+      </ol>
+
+      <h3 id="p2"><span>4.3 </span>Persona 2</h3>
+      <img src="IMG/P2.png" alt='persona 2' width="320" height="290">
+      <ol>
+        <li>Type: Secondary Persona</li>
+        <li>Name: Mihai Ixulescu</li>
+        <li>Background:
+          <ul>
+            <li>Date of Birth:25.05.1999</li>
+            <li>Gender: Male</li>
+            <li>Location: Iasi, Romania</li>
+            <li>Work place: FlyMusic, Assitant Manager</li>
+            <li>School: Attending Economics degree</li>
+            <li>Tecnnology Level: Medium, Basic knowledge + job specific Tasks</li>
+          </ul>
+        </li>
+        <li>Main Points:
+          <ul>
+            <li>Experience with certain products: Works constantly with Task Management and Communication products, also
+              has experience in similar style games;</li>
+            <li>Dislikes about certain aspects: Randomness and things out of his control;</li>
+            <li>Disabilities relevant to our research: Colorblind;</li>
+            <li>Social connections: Parents, brother, work friends.</li>
+            <li>Working environment: Working from home and online, has 1 house pet, a cat.</li>
+          </ul>
+        </li>
+        <li>Goals:
+          <ul>
+            <li>Practical Goals: Make yourself clear, and avoid misunderstandings.</li>
+            <li>Personal Goals: Always put work before fun but also take breaks.</li>
+            <li>Business Goals: Never let a client be disappointed.</li>
+          </ul>
+        </li>
+        <li>Frustrations and Pain Points:
+          <ul>
+            <li>Dislikes hard-to-read UI and unclear Interactions.</li>
+            <li>Disabilities: ColorBlind;</li>
+            <li>Old phone may not support the game performance;</li>
+            <li>Takes time to make decisions;</li>
+            <li>Problems with the product: game lag and hard-to-read on mobile.</li>
+          </ul>
+        </li>
+        <li>Detailed Description:</li>
+        <p>This candidate plays a major role in the management department of a music store, organizing meetings,
+          assigning and checking the task completion of his colleagues. In the mentions section, he stated that in his
+          regular breaks, he often takes time to play games on the mobile device, most of which are from the same
+          producer. All the mentioned games belong to the Fast-Paced category, multiple stretching to a maximum of 5
+          minutes of playtime.</p>
+        <p>Also in the mentions section, it was stated that our potential client suffers from colour blindness, a
+          setting designed specifically for such disabilities is preferable.
+        </p>
+        <li>Scenarios</li>
+        <p>Let us imagine the next series of events:</p>
+        <ul>
+          <li>our secondary persona decided to try our application on the mobile phone;</li>
+          <li>the buy and installation process happened right before work started;</li>
+          <li>in a break time the user decided to finally try the game and jumped right into the gameplay, skipping
+            optional settings</li>
+          <li>the product seemed to lag from time to time and the user was also confused about certain mechanics based
+            on colour coding;</li>
+          <li>the user decided to check the settings and found the Video settings where both the performance and the
+            colour deficiency problems were both fixed.</li>
+          <li>the user now enjoys our product and later he posted a game review praising the producer for the attention
+            to both slow-performing devices and colour-deficient users.</li>
+        </ul>
+      </ol>
+      <p>While our product may not always be used in the Primary target personas we have to take into consideration
+        potential deficiencies or performance limitations when designing our product, and include options that allow
+        more users to enjoy our product.
+      </p>
+      <h3 id="p3"><span>4.4 </span>Persona 3</h3>
+      <img src="IMG/P3.png" alt='persona 3' width="320" height="300">
+      <ol>
+        <li>Type: Negative Persona</li>
+        <li>Name: Vasile Moș</li>
+        <li>Background:
+          <ul>
+            <li>Date of Birth:31.01.1956</li>
+            <li>Gender: Male</li>
+            <li>Location: Iasi, Romania</li>
+            <li>Work place: Former owner of farming equipment distribution, retired.</li>
+            <li>School: Master's Degree in Animal Nutrition.</li>
+            <li>Tecnnology Level: Knows how to use a smart mobile device for basic tasks</li>
+          </ul>
+        </li>
+        <li>Main Points:
+          <ul>
+            <li>Experience with certain products: Little to no experience with technological products.</li>
+            <li>Dislikes about certain aspects: Dislikes useless distractions, and spending time with a “machine”;</li>
+            <li>Disabilities relevant to our research: Bad eyesight, bad hearing, slow eye-hand coordination;</li>
+            <li>Social connections: Former colleagues and their families, might include potential Primary Persona users
+            </li>
+            <li>Working environment: No working environment;</li>
+          </ul>
+        </li>
+        <li>Goals:
+          <ul>
+            <li>Practical Goals: Don’t rely on technology so much.</li>
+            <li>Personal Goals: I’d always prefer to spend time with a person, not some machine.</li>
+            <li>Business Goals: I did my part, but I can land a hand sometimes.</li>
+          </ul>
+        </li>
+        <li>Frustrations and Pain Points:
+          <ul>
+            <li>Dislikes towards technology and lack of human interaction make this user not a good audience for our
+              product.</li>
+            <li>Bad eyesight and motor functions make it hard for the user to interact with our product</li>
+            <li>Old devices might make our product seem weak in general.</li>
+            <li>Users with the same disabilities have an unfair disadvantage in completing the game.</li>
+          </ul>
+        </li>
+        <li>Detailed Description:</li>
+        <p>It is safe to assume that this persona is not what we are looking for, therefore it represents the category
+          of Negative personas. There are limitations to both the devices owned by the user and the quality of his
+          interaction capabilities. </p>
+        <p>In the mentions section, it was stated that he does not agree with technology playing an important role in
+          one’s life. Taking all these facts into consideration we are going to focus product advertisements on the
+          younger generation and Primary Personas.
+        </p>
+        <li>Scenarios</li>
+        <p>Let us imagine the next series of events:</p>
+        <ul>
+          <li>the individual noticed an user from the Primary or Secondary category of personas using our product and
+            started a conversation.</li>
+          <li>during the said conversation, he expressed his disbelief towards technology and playing alone but was
+            encouraged to try our product anyway;</li>
+          <li>the user experiences are not favourable because of his disabilities working against the fast-paced
+            strategy flow of the product.</li>
+          <li>-it is highly unlikely that our product will sell to this individual.</li>
+        </ul>
+      </ol>
+      <p>Needless to say, this Persona offers no potential profits to our product’s economy and it should be avoided.
+      </p>
+      <h3 id="p4"><span>4.5 </span>Persona 4</h3>
+      <img src="IMG/P4.png" alt='persona 4' width="320" height="300">
+      <ol>
+        <li>Type: Cistomer Persona</li>
+        <li>Name: Daniel Zulescu</li>
+        <li>Background:
+          <ul>
+            <li>Date of Birth:20.04.1989</li>
+            <li>Gender: Male</li>
+            <li>Location: Iasi, Romania</li>
+            <li>Work place: Bitdefender, Human Resources</li>
+            <li>School: Computer Science Degree.</li>
+            <li>Tecnnology Level: Able to complete complex tasks on both desktop and mobile devices.</li>
+          </ul>
+        </li>
+        <li>Main Points:
+          <ul>
+            <li>Experience with certain products: Experience with communication and time management products, no
+              experience with products similar to ours.</li>
+            <li>Dislikes about certain aspects: Paying for useless or joke products.;</li>
+            <li>Disabilities relevant to our research: No relevant disabilities.</li>
+            <li>Social connections: Family and colleagues.</li>
+            <li>Working environment: Office worker, constantly interacting with other humans.</li>
+          </ul>
+        </li>
+        <li>Goals:
+          <ul>
+            <li>Practical Goals: Spend every second doing something that matters.</li>
+            <li>Personal Goals: Always be proud of what you do.</li>
+            <li>Business Goals: Offer the best you can to your employer.
+            </li>
+          </ul>
+        </li>
+        <li>Frustrations and Pain Points:
+          <ul>
+            <li>Dislikes slow and repetitive User Experience.</li>
+            <li>Not willing to pay for a variety of products including ours.</li>
+            <li>No relevant disabilities.</li>
+            <li>No difficulties in completing tasks.</li>
+          </ul>
+        </li>
+        <li>Detailed Description:</li>
+        <p>This is the Customer Persona, a “ghost” user that most likely purchased our product for someone else. Most
+          aspects of what this user likes or dislikes are irrelevant to the production and distribution teams but it
+          must be brought to our attention one potential dislike. As it was stated previously the unwillingness to pay
+          for “useless” products might make it difficult to convince the individual to even buy our product for someone
+          else.</p>
+        <p>In the mentions section, it was stated that exceptions to such beliefs are possible if the product seems
+          worth purchasing for someone else, very likely from the Primary Persona category.
+        </p>
+        <li>Scenarios</li>
+        <p>Let us imagine the next series of events:</p>
+        <ul>
+          <li>The individual is asked to purchase our product for someone who can't purchase it themselves (for example,
+            a child).</li>
+          <li>The individual tries to look for our product and view any potential reviews, or get a vague sense of what
+            our product represents.
+          </li>
+          <li>Upon closer inspection, the user decides to balance the value of the product with the demanded price.</li>
+          <li>After considering the option, the individual decided to purchase our product for the potential primary
+            user.</li>
+        </ul>
+      </ol>
+      <p>It is important to advertise our product properly, taking into consideration Customer personas, thus we must
+        include mentions that might intrigue and convince potential buyers into purchasing our product.
+      </p>
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+
+      <h2 id="ui"><span>5. </span> UI - Storyboard form</h2>
+
+      <h3 id="uf"><span>5.1</span> User flow</h3>
+      <img src="IMG/u_f.png" alt="uf" width="720" height="512">
+      <h3 id="mm"><span>5.2</span> Main menu (Desktop vs Mobile)</h3>
+      <img src="IMG/mm.png" alt="uf" width="1420" height="452">
+      <h3 id="cr"><span>5.3</span> Credits (Desktop vs Mobile)</h3>
+      <img src="IMG/credits.png" alt="uf" width="1420" height="452">
+      <h3 id="set"><span>5.4</span> Settings (Desktop vs Mobile)</h3>
+      <img src="IMG/set.png" alt="uf" width="1420" height="452">
+      <h3 id="pps"><span>5.5</span> Pre Play Screen (Desktop vs Mobile)</h3>
+      <img src="IMG/preg.png" alt="uf" width="1420" height="452">
+      <h3 id="dif"><span>5.6</span> Difficulty (Desktop vs Mobile)</h3>
+      <img src="IMG/diff.png" alt="uf" width="1420" height="452">
+      <h3 id="ml"><span>5.7</span> Map Layout (Desktop vs Mobile)</h3>
+      <img src="IMG/ml.png" alt="uf" width="1420" height="452">
+      <h3 id="fai"><span>5.8</span> Level Failed (Desktop vs Mobile)</h3>
+      <img src="IMG/fail.png" alt="uf" width="1420" height="452">
+      <h3 id="won"><span>5.9</span> Level Complete(Desktop vs Mobile)</h3>
+      <img src="IMG/won.png" alt="uf" width="1420" height="452">
+
+    </section>
+
+    <section typeof="sa:MaterialsAndMethods" role="doc-chapter">
+
+      <h2 id="functionalRequirements"><span>6. </span>Interaction Types</h2>
+      <p>There are going to be 3 main ways for our users to interact with the product, 2 of them being dependent on the
+        platform used to host the application and the final one being a toggle option which allows the player to choose
+        if he wants to use the interaction and the features it provides.</p>
+
+      <h3 id="register"><span>6.1 </span>Keyboard + Mouse Input</h3>
+      <p>
+        This interface is used in the desktop device format and it consists of two physical devices:
+      <ul>
+        <li>The Keyboard is used for movement actions which allow the player to explore and progress through levels. The
+          default values for the keyboard actions are W A S D for Forward Strafe-Left Backward Strafe-Right. Two more
+          actions can be used through the Keyboard, the Pause Game which is defaulted to the Escape Key, and the
+          Map-Device which is defaulted to F. These actions can be modified to custom values by the user in the Settings
+          -> Controls Menu.</li>
+        <li>The Mouse is used for redirecting the game camera which allows the player to look around the environment of
+          the game. Another function of the mouse is to navigate the Menu Screens by clicking on the respective buttons
+          and modifying settings for a better user experience.</li>
+      </ul>
+
+      </p>
+
+      <h3 id="login"><span>6.2 </span>Mobile Touch-screen Input</h3>
+      <p>
+        This is the interaction layer used for hosting the application on mobile devices:
+      <ul>
+        <li>While the Menu Screens and the overall aspect of the application remain unchanged we are needed to use the
+          touch-screen function of the mobile device for interaction.</li>
+        <li>The Menu Screens are easily usable by touching the buttons where normally a mouse click would be used.</li>
+        <li>For the In-Game part of the application, we need to implement a virtual overlay over the game screen. It
+          will consist of:</li>
+        <ul>
+          <li>two virtual joystick-like controls, the left one used for movement and the right one for looking around;
+          </li>
+          <li>two small buttons which are used for the Pause Game and the Map-Device functions.</li>
+        </ul>
+      </ul>
+
+      </p>
+
+      <h3 typeof="sa:MaterialsAndMethods" role="doc-chapter" id="uploadrecipe"><span>6.3 </span>Audio Input-Output</h3>
+      <p>
+        This interaction layer has been implemented for the audio mechanic of the game consisting of two ways of
+        interaction:
+      <ul>
+        <li>Audio Input: Given by the player through the microphone component of the hosting device it will immediately
+          inform nearby ghosts of the player’s location at the moment of the Audio Input. While this might be viewed as
+          a negative only effect, players might strategize and trick ghosts into entering blockades or leaving zones the
+          player has to enter in order to progress.</li>
+        <li>Audio Output: Given by the nearby ghost through the speaker component of the hosting device, it will inform
+          the player of the location of nearby ghosts. This mechanic is useful as it will give the player information
+          about, what ghosts are near, how far are they and if they are nearing the player or running away from him.
+        </li>
+      </ul>
+
+      </p>
+
+    </section>
+
+    <section typeof="sa:ReferenceList" id="referinte" role="doc-bibliography">
+      <h2 id="bibliography"><span>7. </span>References</h2>
+      <ol>
+        <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage" id="busaco"
+          resource="https://profs.info.uaic.ro/~busaco/teach/courses/web/web-film.html">
+          <span property="schema:author" typeof="schema:Person">
+            <span property="schema:givenName">Sabin</span>
+            <span property="schema:aditionalName">Corneliu</span>
+            <span property="schema:familiyName">Buraga</span>
+          </span>,
+          <cite property="schema:name">
+            <a href="https://profs.info.uaic.ro/~busaco/teach/courses/hci/hci-biblio.html">
+              Site-ul disciplinei "Human-Computer Interaction"
+            </a> parte a
+            <span typeof="schema:Organization" resource="https://www.uaic.ro">
+              <a href="https://www.uaic.ro">
+                <span property="schema:name">UAIC</span>
+              </a>
+            </span>
+          </cite>
+        <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage" id="busaco"
+          resource="https://www.w3schools.com">
+          <cite property="schema:name">
+            <a href="https://www.w3schools.com">
+              W3School
+            </a>
+          </cite>
+        </li>
+        <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage" id="busaco"
+          resource="https://www.figma.com">
+          <cite property="schema:name">
+            <a href="https://www.figma.com">
+              Figma
+            </a>
+          </cite>
+        </li>
+        <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage" id="busaco"
+          resource="https://www.replit.com">
+          <cite property="schema:name">
+            <a href="https://www.replit.com">
+              Replit
+            </a>
+          </cite>
+        </li>
+        <li property="schema:citation" role="doc-biblioentry" typeof="schema:WebPage" id="busaco"
+          resource="https://w3c.github.io/scholarly-html">
+          <cite property="schema:name">
+            <a href="https://w3c.github.io/scholarly-html">
+              Scholarly Html
+            </a>
+          </cite>
+        </li>
+
+
+      </ol>
+    </section>
+  </article>
+</body>
+
+</html>
